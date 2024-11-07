@@ -54,12 +54,12 @@ function App() {
   };
 
   return (
-    <div className="flex p-10 gap-5 w-screen h-[50vh]">
+    <div className="flex md:flex-row flex-col p-10 gap-5 w-screen h-[50vh]">
       <div
         id="todo"
         onDrop={(e) => handleDrop(e, "todo")}
         onDragOver={(e) => handleDragOver(e)}
-        className={`border w-full h-full gap-4 p-4 flex flex-col rounded ${
+        className={`border-2 w-full h-full gap-4 p-4 flex flex-col rounded ${
           Indicator === "todo" ? "bg-blue-400 opacity-30" : "bg-white"
         }`}
       >
@@ -69,7 +69,7 @@ function App() {
         id="progress"
         onDrop={(e) => handleDrop(e, "progress")}
         onDragOver={(e) => handleDragOver(e)}
-        className={`border w-full h-full gap-4 p-4 flex flex-col rounded ${
+        className={`border-2 w-full h-full gap-4 p-4 flex flex-col rounded ${
           Indicator === "progress" ? "bg-blue-400 bg-opacity-30 " : "bg-white"
         }`}
       >
@@ -79,7 +79,7 @@ function App() {
         id="done"
         onDrop={(e) => handleDrop(e, "done")}
         onDragOver={(e) => handleDragOver(e)}
-        className={`border w-full h-full gap-4 p-4 flex flex-col rounded ${
+        className={`border-2 w-full h-full gap-4 p-4 flex flex-col rounded ${
           Indicator === "done" ? "bg-blue-400 opacity-30" : "bg-white"
         }`}
       >
